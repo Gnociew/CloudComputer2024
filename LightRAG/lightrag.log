@@ -1,0 +1,758 @@
+2024-12-23 19:07:34,818 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-23 19:07:34,818 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-23 19:07:34,818 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-23 19:07:34,818 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-23 19:08:28,504 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-23 19:08:28,504 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-23 19:08:28,504 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-23 19:08:28,504 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-23 19:10:02,003 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-23 19:10:02,003 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-23 19:10:02,003 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-23 19:10:02,003 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-23 19:10:02,003 - lightrag - INFO - Loaded graph from ./dickens\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-23 19:10:02,013 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-23 19:10:02,340 - lightrag - INFO - [New Chunks] inserting 42 chunks
+2024-12-23 19:10:02,340 - lightrag - INFO - Inserting 42 vectors to chunks
+2024-12-23 19:10:26,870 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-12-24 00:24:42,401 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-24 00:24:42,401 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-24 00:24:42,401 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-24 00:24:42,401 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-24 00:24:42,417 - lightrag - INFO - Loaded graph from ./dickens\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-24 00:24:42,417 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-24 00:24:42,700 - lightrag - INFO - [New Chunks] inserting 42 chunks
+2024-12-24 00:24:42,700 - lightrag - INFO - Inserting 42 vectors to chunks
+2024-12-24 00:24:42,719 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-12-24 00:25:53,561 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-24 00:25:53,561 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-24 00:25:53,561 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-24 00:25:53,561 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-24 00:25:53,575 - lightrag - INFO - Loaded graph from ./dickens\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-24 00:25:53,584 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-24 00:25:53,843 - lightrag - INFO - [New Chunks] inserting 42 chunks
+2024-12-24 00:25:53,858 - lightrag - INFO - Inserting 42 vectors to chunks
+2024-12-24 00:25:53,862 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-12-24 00:33:37,318 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-24 00:33:37,318 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-24 00:33:37,318 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-24 00:33:37,318 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-24 00:33:37,335 - lightrag - INFO - Loaded graph from ./dickens\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-24 00:33:37,337 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-24 00:33:37,624 - lightrag - INFO - [New Chunks] inserting 42 chunks
+2024-12-24 00:33:37,624 - lightrag - INFO - Inserting 42 vectors to chunks
+2024-12-24 00:34:02,571 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-12-24 01:03:32,833 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-24 01:03:32,849 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-24 01:03:32,849 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-24 01:03:32,849 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-24 01:03:32,849 - lightrag - INFO - Loaded graph from ./dickens\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-24 01:03:32,849 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-24 01:03:33,117 - lightrag - INFO - [New Chunks] inserting 42 chunks
+2024-12-24 01:03:33,117 - lightrag - INFO - Inserting 42 vectors to chunks
+2024-12-24 01:05:25,315 - lightrag - INFO - Logger initialized for working directory: ./dickens
+2024-12-24 01:05:25,315 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-24 01:05:25,315 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-24 01:05:25,315 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-24 01:05:25,315 - lightrag - INFO - Loaded graph from ./dickens\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-24 01:05:25,332 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-24 01:05:25,598 - lightrag - INFO - [New Chunks] inserting 42 chunks
+2024-12-24 01:05:25,598 - lightrag - INFO - Inserting 42 vectors to chunks
+2024-12-24 01:05:45,768 - lightrag - INFO - [Entity Extraction]...
+2024-12-24 01:07:20,882 - lightrag - INFO - Inserting entities into storage...
+2024-12-24 01:07:30,304 - lightrag - INFO - Inserting relationships into storage...
+2024-12-24 01:07:30,318 - lightrag - INFO - Inserting 400 vectors to entities
+2024-12-24 01:07:39,330 - lightrag - INFO - Inserting 292 vectors to relationships
+2024-12-24 01:07:48,074 - lightrag - INFO - Writing graph with 403 nodes, 292 edges
+2024-12-24 01:07:49,764 - lightrag - INFO - Truncate 39 to 3 chunks
+2024-12-24 01:08:49,155 - lightrag - INFO - kw_prompt result:
+2024-12-24 01:08:50,792 - lightrag - INFO - Local query uses 60 entites, 101 relations, 3 text units
+2024-12-24 01:09:01,348 - lightrag - INFO - kw_prompt result:
+2024-12-24 01:09:03,624 - lightrag - INFO - Global query uses 48 entites, 60 relations, 3 text units
+2024-12-24 01:09:16,757 - lightrag - INFO - kw_prompt result:
+2024-12-24 01:09:18,672 - lightrag - INFO - Local query uses 60 entites, 101 relations, 3 text units
+2024-12-24 01:09:20,393 - lightrag - INFO - Global query uses 53 entites, 60 relations, 3 text units
+2024-12-24 23:53:25,809 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-24 23:53:25,809 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-24 23:53:25,809 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-24 23:53:25,809 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 01:48:32,989 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 01:48:32,990 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 01:48:32,990 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 01:48:32,990 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 01:48:34,425 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-25 01:48:38,407 - lightrag - INFO - [New Chunks] inserting 80 chunks
+2024-12-25 01:48:38,407 - lightrag - INFO - Inserting 80 vectors to chunks
+2024-12-25 01:49:20,329 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-12-25 10:28:03,758 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 10:28:03,759 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 10:28:03,759 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 10:28:03,760 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 10:28:03,761 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 10:32:14,146 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 10:32:14,147 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 10:32:14,147 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 10:32:14,147 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 10:32:14,149 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 10:43:43,263 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 10:43:43,263 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 10:43:43,264 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 10:43:43,264 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 10:43:43,265 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 10:46:26,704 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 10:46:26,704 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 10:46:26,705 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 10:46:26,705 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 10:46:26,706 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 10:54:15,945 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 10:54:15,945 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 10:54:15,946 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 10:54:15,946 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 10:54:15,947 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 10:57:44,904 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 10:57:44,904 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 10:57:44,905 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 10:57:44,905 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 10:57:44,906 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 11:03:19,740 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 11:03:19,741 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 11:03:19,741 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 11:03:19,741 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 11:03:19,742 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 11:03:56,873 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf
+2024-12-25 11:03:56,873 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 11:03:56,874 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 11:03:56,874 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 11:03:56,875 - lightrag - INFO - Loaded graph from ./kg-pdf/graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-12-25 11:07:05,836 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf-test
+2024-12-25 11:07:05,837 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 11:07:05,837 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 11:07:05,837 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 11:07:59,375 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf-test
+2024-12-25 11:07:59,376 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 11:07:59,376 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 11:07:59,376 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 11:08:00,773 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-25 11:08:04,349 - lightrag - INFO - [New Chunks] inserting 80 chunks
+2024-12-25 11:08:04,349 - lightrag - INFO - Inserting 80 vectors to chunks
+2024-12-25 11:08:18,807 - lightrag - INFO - [Entity Extraction]...
+2024-12-25 11:25:18,179 - lightrag - INFO - Inserting entities into storage...
+2024-12-25 11:25:18,228 - lightrag - INFO - Inserting relationships into storage...
+2024-12-25 11:25:18,238 - lightrag - INFO - Inserting 662 vectors to entities
+2024-12-25 11:26:52,418 - lightrag - INFO - Inserting 143 vectors to relationships
+2024-12-25 11:27:11,823 - lightrag - INFO - Writing graph with 666 nodes, 143 edges
+2024-12-25 11:27:12,351 - lightrag - INFO - Truncate 60 to 3 chunks
+2024-12-25 11:27:16,274 - lightrag - INFO - kw_prompt result:
+2024-12-25 11:27:16,752 - lightrag - INFO - Local query uses 60 entites, 26 relations, 3 text units
+2024-12-25 11:27:21,534 - lightrag - INFO - kw_prompt result:
+2024-12-25 11:27:22,003 - lightrag - INFO - Global query uses 63 entites, 60 relations, 3 text units
+2024-12-25 11:27:31,849 - lightrag - INFO - kw_prompt result:
+2024-12-25 11:27:32,232 - lightrag - INFO - Local query uses 60 entites, 20 relations, 3 text units
+2024-12-25 11:27:32,677 - lightrag - INFO - Global query uses 69 entites, 60 relations, 3 text units
+2024-12-25 12:54:18,087 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf-test
+2024-12-25 12:54:18,087 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 12:54:18,087 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 12:54:18,088 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 12:55:55,951 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf-test
+2024-12-25 12:55:55,952 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 12:55:55,952 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 12:55:55,952 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 12:56:42,715 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-25 12:56:43,146 - lightrag - INFO - [New Chunks] inserting 14 chunks
+2024-12-25 12:56:43,146 - lightrag - INFO - Inserting 14 vectors to chunks
+2024-12-25 12:56:45,935 - lightrag - INFO - [Entity Extraction]...
+2024-12-25 13:01:13,956 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf-test
+2024-12-25 13:01:13,957 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 13:01:13,957 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 13:01:13,957 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 13:05:49,382 - lightrag - INFO - Logger initialized for working directory: ./kg-pdf-test
+2024-12-25 13:05:49,383 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 13:05:49,383 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 13:05:49,383 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 13:06:36,215 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-12-25 13:06:36,656 - lightrag - INFO - [New Chunks] inserting 14 chunks
+2024-12-25 13:06:36,656 - lightrag - INFO - Inserting 14 vectors to chunks
+2024-12-25 13:06:39,281 - lightrag - INFO - [Entity Extraction]...
+2024-12-25 13:13:27,918 - lightrag - INFO - Inserting entities into storage...
+2024-12-25 13:13:27,953 - lightrag - INFO - Inserting relationships into storage...
+2024-12-25 13:13:27,959 - lightrag - INFO - Inserting 412 vectors to entities
+2024-12-25 13:14:17,740 - lightrag - INFO - Inserting 91 vectors to relationships
+2024-12-25 13:14:29,195 - lightrag - INFO - Writing graph with 429 nodes, 91 edges
+2024-12-25 13:14:29,603 - lightrag - INFO - Truncate 11 to 3 chunks
+2024-12-25 13:14:37,275 - lightrag - INFO - kw_prompt result:
+2024-12-25 13:14:37,711 - lightrag - INFO - Local query uses 60 entites, 9 relations, 3 text units
+2024-12-25 13:14:45,573 - lightrag - INFO - kw_prompt result:
+2024-12-25 13:14:46,015 - lightrag - INFO - Global query uses 98 entites, 60 relations, 3 text units
+2024-12-25 13:14:53,921 - lightrag - INFO - kw_prompt result:
+2024-12-25 13:14:54,346 - lightrag - INFO - Local query uses 60 entites, 6 relations, 4 text units
+2024-12-25 13:14:54,884 - lightrag - INFO - Global query uses 97 entites, 60 relations, 3 text units
+2024-12-25 18:03:10,862 - lightrag - INFO - Logger initialized for working directory: ./local_neo4jWorkDir
+2024-12-25 18:03:10,863 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./local_neo4jWorkDir,
+  embedding_cache_config = {'enabled': False, 'similarity_threshold': 0.95, 'use_llm_check': False},
+  kv_storage = JsonKVStorage,
+  vector_storage = NanoVectorDBStorage,
+  graph_storage = Neo4JStorage,
+  log_level = DEBUG,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 2048, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 2048, 'max_token_size': 8192, 'func': <function <lambda> at 0x732e31c8bd90>, 'concurrent_limit': 16},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function zhipu_complete at 0x732d3abfe290>,
+  llm_model_name = glm-4-flashx,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 8,
+  llm_model_kwargs = {},
+  vector_db_storage_cls_kwargs = {},
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x732d3abe76d0>
+
+2024-12-25 18:03:10,863 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-12-25 18:03:10,863 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 18:03:10,863 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 18:03:11,847 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:03:11,848 - lightrag - DEBUG - Query: ---Role---
+
+You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+
+---Goal---
+
+Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on specific entities, details, or concrete terms.
+
+---Instructions---
+
+- Output the keywords in JSON format.
+- The JSON should have two keys:
+  - "high_level_keywords" for overarching concepts or themes.
+  - "low_level_keywords" for specific entities or details.
+
+######################
+-Examples-
+######################
+Example 1:
+
+Query: "How does international trade influence global economic stability?"
+################
+Output:
+{{
+  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
+  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+}}
+#############################
+Example 2:
+
+Query: "What are the environmental consequences of deforestation on biodiversity?"
+################
+Output:
+{{
+  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
+  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+}}
+#############################
+Example 3:
+
+Query: "What is the role of education in reducing poverty?"
+################
+Output:
+{{
+  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
+  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+}}
+#############################
+
+#############################
+-Real Data-
+######################
+Query: 总结一下主要的知识点
+######################
+The `Output` should be human text, not unicode characters. Keep the same language as `Query`.
+Output:
+
+
+2024-12-25 18:03:11,848 - lightrag - DEBUG - System prompt: You are a helpful assistant. 注意内容里的敏感词用***替换。
+2024-12-25 18:03:12,785 - lightrag - INFO - kw_prompt result:
+2024-12-25 18:03:15,016 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:03:15,016 - lightrag - DEBUG - Query: 总结一下主要的知识点
+2024-12-25 18:03:15,016 - lightrag - DEBUG - System prompt: ---Role---
+
+You are a helpful assistant responding to questions about data in the tables provided.
+
+
+---Goal---
+
+Generate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.
+If you don't know the answer, just say so. Do not make anything up.
+Do not include information where the supporting evidence for it is not provided.
+
+---Target response length and format---
+
+Multiple Paragraphs
+
+---Data tables---
+
+
+-----Entities-----
+```csv
+
+```
+-----Relationships-----
+```csv
+
+```
+-----Sources-----
+```csv
+
+```
+
+
+Add sections and commentary to the response as appropriate for the length and format. Style the response in markdown.
+
+2024-12-25 18:03:16,244 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:03:16,245 - lightrag - DEBUG - Query: ---Role---
+
+You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+
+---Goal---
+
+Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on specific entities, details, or concrete terms.
+
+---Instructions---
+
+- Output the keywords in JSON format.
+- The JSON should have two keys:
+  - "high_level_keywords" for overarching concepts or themes.
+  - "low_level_keywords" for specific entities or details.
+
+######################
+-Examples-
+######################
+Example 1:
+
+Query: "How does international trade influence global economic stability?"
+################
+Output:
+{{
+  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
+  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+}}
+#############################
+Example 2:
+
+Query: "What are the environmental consequences of deforestation on biodiversity?"
+################
+Output:
+{{
+  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
+  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+}}
+#############################
+Example 3:
+
+Query: "What is the role of education in reducing poverty?"
+################
+Output:
+{{
+  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
+  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+}}
+#############################
+
+#############################
+-Real Data-
+######################
+Query: 总结一下主要的知识点
+######################
+The `Output` should be human text, not unicode characters. Keep the same language as `Query`.
+Output:
+
+
+2024-12-25 18:03:16,245 - lightrag - DEBUG - System prompt: You are a helpful assistant. 注意内容里的敏感词用***替换。
+2024-12-25 18:03:17,154 - lightrag - INFO - kw_prompt result:
+2024-12-25 18:03:17,722 - lightrag - WARNING - No high level context found. Switching to local mode.
+2024-12-25 18:06:25,688 - lightrag - INFO - Logger initialized for working directory: ./local_neo4jWorkDir
+2024-12-25 18:06:25,688 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./local_neo4jWorkDir,
+  embedding_cache_config = {'enabled': False, 'similarity_threshold': 0.95, 'use_llm_check': False},
+  kv_storage = JsonKVStorage,
+  vector_storage = NanoVectorDBStorage,
+  graph_storage = Neo4JStorage,
+  log_level = DEBUG,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 2048, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 2048, 'max_token_size': 8192, 'func': <function <lambda> at 0x79b997963d90>, 'concurrent_limit': 16},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function zhipu_complete at 0x79b8a0ae6290>,
+  llm_model_name = glm-4-flashx,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 8,
+  llm_model_kwargs = {},
+  vector_db_storage_cls_kwargs = {},
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x79b8a0acb6d0>
+
+2024-12-25 18:06:25,689 - lightrag - INFO - Load KV llm_response_cache with 1 data
+2024-12-25 18:06:25,689 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 18:06:25,689 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 18:06:26,571 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:06:26,571 - lightrag - DEBUG - Query: ---Role---
+
+You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+
+---Goal---
+
+Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on specific entities, details, or concrete terms.
+
+---Instructions---
+
+- Output the keywords in JSON format.
+- The JSON should have two keys:
+  - "high_level_keywords" for overarching concepts or themes.
+  - "low_level_keywords" for specific entities or details.
+
+######################
+-Examples-
+######################
+Example 1:
+
+Query: "How does international trade influence global economic stability?"
+################
+Output:
+{{
+  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
+  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+}}
+#############################
+Example 2:
+
+Query: "What are the environmental consequences of deforestation on biodiversity?"
+################
+Output:
+{{
+  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
+  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+}}
+#############################
+Example 3:
+
+Query: "What is the role of education in reducing poverty?"
+################
+Output:
+{{
+  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
+  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+}}
+#############################
+
+#############################
+-Real Data-
+######################
+Query: 意识的能动作用是什么？
+######################
+The `Output` should be human text, not unicode characters. Keep the same language as `Query`.
+Output:
+
+
+2024-12-25 18:06:26,571 - lightrag - DEBUG - System prompt: You are a helpful assistant. 注意内容里的敏感词用***替换。
+2024-12-25 18:06:27,685 - lightrag - INFO - kw_prompt result:
+2024-12-25 18:06:29,615 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:06:29,615 - lightrag - DEBUG - Query: 意识的能动作用是什么？
+2024-12-25 18:06:29,616 - lightrag - DEBUG - System prompt: ---Role---
+
+You are a helpful assistant responding to questions about data in the tables provided.
+
+
+---Goal---
+
+Generate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.
+If you don't know the answer, just say so. Do not make anything up.
+Do not include information where the supporting evidence for it is not provided.
+
+---Target response length and format---
+
+Multiple Paragraphs
+
+---Data tables---
+
+
+-----Entities-----
+```csv
+
+```
+-----Relationships-----
+```csv
+
+```
+-----Sources-----
+```csv
+
+```
+
+
+Add sections and commentary to the response as appropriate for the length and format. Style the response in markdown.
+
+2024-12-25 18:06:34,223 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:06:34,223 - lightrag - DEBUG - Query: ---Role---
+
+You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+
+---Goal---
+
+Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on specific entities, details, or concrete terms.
+
+---Instructions---
+
+- Output the keywords in JSON format.
+- The JSON should have two keys:
+  - "high_level_keywords" for overarching concepts or themes.
+  - "low_level_keywords" for specific entities or details.
+
+######################
+-Examples-
+######################
+Example 1:
+
+Query: "How does international trade influence global economic stability?"
+################
+Output:
+{{
+  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
+  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+}}
+#############################
+Example 2:
+
+Query: "What are the environmental consequences of deforestation on biodiversity?"
+################
+Output:
+{{
+  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
+  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+}}
+#############################
+Example 3:
+
+Query: "What is the role of education in reducing poverty?"
+################
+Output:
+{{
+  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
+  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+}}
+#############################
+
+#############################
+-Real Data-
+######################
+Query: 意识的能动作用是什么？
+######################
+The `Output` should be human text, not unicode characters. Keep the same language as `Query`.
+Output:
+
+
+2024-12-25 18:06:34,223 - lightrag - DEBUG - System prompt: You are a helpful assistant. 注意内容里的敏感词用***替换。
+2024-12-25 18:06:35,395 - lightrag - INFO - kw_prompt result:
+2024-12-25 18:06:37,468 - lightrag - WARNING - No high level context found. Switching to local mode.
+2024-12-25 18:14:12,337 - lightrag - INFO - Logger initialized for working directory: ./local_neo4jWorkDir
+2024-12-25 18:14:12,337 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./local_neo4jWorkDir,
+  embedding_cache_config = {'enabled': False, 'similarity_threshold': 0.95, 'use_llm_check': False},
+  kv_storage = JsonKVStorage,
+  vector_storage = NanoVectorDBStorage,
+  graph_storage = Neo4JStorage,
+  log_level = DEBUG,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 2048, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 2048, 'max_token_size': 8192, 'func': <function <lambda> at 0x7e5d62e97d90>, 'concurrent_limit': 16},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function zhipu_complete at 0x7e5c6bdf6290>,
+  llm_model_name = glm-4-flashx,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 8,
+  llm_model_kwargs = {},
+  vector_db_storage_cls_kwargs = {},
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x7e5c6bddf6d0>
+
+2024-12-25 18:14:12,337 - lightrag - INFO - Load KV llm_response_cache with 1 data
+2024-12-25 18:14:12,338 - lightrag - INFO - Load KV full_docs with 0 data
+2024-12-25 18:14:12,338 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-12-25 18:14:13,347 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:14:13,347 - lightrag - DEBUG - Query: ---Role---
+
+You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+
+---Goal---
+
+Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on specific entities, details, or concrete terms.
+
+---Instructions---
+
+- Output the keywords in JSON format.
+- The JSON should have two keys:
+  - "high_level_keywords" for overarching concepts or themes.
+  - "low_level_keywords" for specific entities or details.
+
+######################
+-Examples-
+######################
+Example 1:
+
+Query: "How does international trade influence global economic stability?"
+################
+Output:
+{{
+  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
+  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+}}
+#############################
+Example 2:
+
+Query: "What are the environmental consequences of deforestation on biodiversity?"
+################
+Output:
+{{
+  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
+  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+}}
+#############################
+Example 3:
+
+Query: "What is the role of education in reducing poverty?"
+################
+Output:
+{{
+  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
+  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+}}
+#############################
+
+#############################
+-Real Data-
+######################
+Query: 意识的能动作用
+######################
+The `Output` should be human text, not unicode characters. Keep the same language as `Query`.
+Output:
+
+
+2024-12-25 18:14:13,347 - lightrag - DEBUG - System prompt: You are a helpful assistant. 注意内容里的敏感词用***替换。
+2024-12-25 18:14:14,951 - lightrag - INFO - kw_prompt result:
+2024-12-25 18:14:16,247 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:14:16,248 - lightrag - DEBUG - Query: 意识的能动作用
+2024-12-25 18:14:16,248 - lightrag - DEBUG - System prompt: ---Role---
+
+You are a helpful assistant responding to questions about data in the tables provided.
+
+
+---Goal---
+
+Generate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.
+If you don't know the answer, just say so. Do not make anything up.
+Do not include information where the supporting evidence for it is not provided.
+
+---Target response length and format---
+
+Multiple Paragraphs
+
+---Data tables---
+
+
+-----Entities-----
+```csv
+
+```
+-----Relationships-----
+```csv
+
+```
+-----Sources-----
+```csv
+
+```
+
+
+Add sections and commentary to the response as appropriate for the length and format. Style the response in markdown.
+
+2024-12-25 18:14:19,630 - lightrag - DEBUG - ===== Query Input to LLM =====
+2024-12-25 18:14:19,631 - lightrag - DEBUG - Query: ---Role---
+
+You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+
+---Goal---
+
+Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on specific entities, details, or concrete terms.
+
+---Instructions---
+
+- Output the keywords in JSON format.
+- The JSON should have two keys:
+  - "high_level_keywords" for overarching concepts or themes.
+  - "low_level_keywords" for specific entities or details.
+
+######################
+-Examples-
+######################
+Example 1:
+
+Query: "How does international trade influence global economic stability?"
+################
+Output:
+{{
+  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
+  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+}}
+#############################
+Example 2:
+
+Query: "What are the environmental consequences of deforestation on biodiversity?"
+################
+Output:
+{{
+  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
+  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+}}
+#############################
+Example 3:
+
+Query: "What is the role of education in reducing poverty?"
+################
+Output:
+{{
+  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
+  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+}}
+#############################
+
+#############################
+-Real Data-
+######################
+Query: 意识的能动作用
+######################
+The `Output` should be human text, not unicode characters. Keep the same language as `Query`.
+Output:
+
+
+2024-12-25 18:14:19,631 - lightrag - DEBUG - System prompt: You are a helpful assistant. 注意内容里的敏感词用***替换。
+2024-12-25 18:14:21,416 - lightrag - INFO - kw_prompt result:
+2024-12-25 18:14:22,250 - lightrag - WARNING - No high level context found. Switching to local mode.
