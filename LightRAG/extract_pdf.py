@@ -32,10 +32,10 @@ rag = LightRAG(
     working_dir=WORKING_DIR,
     llm_model_func=zhipu_complete,
     graph_storage="Neo4JStorage",
-    log_level="DEBUG",
     llm_model_name="glm-4-flashx",  # Using the most cost/performance balance model, but you can change it here.
     llm_model_max_async=8,
     llm_model_max_token_size=32768,
+    vector_storage="MilvusVectorDBStorge",
     embedding_func=EmbeddingFunc(
         embedding_dim=2048,  # Zhipu embedding-3 dimension
         max_token_size=8192,
@@ -44,7 +44,7 @@ rag = LightRAG(
 )
 
 # # PDF 文件路径
-# file_path = 'test.pdf'
+# file_path = '生物必修一.pdf'
 
 # # 将 PDF 转换为图像
 # images = convert_from_path(file_path)
@@ -66,21 +66,23 @@ rag = LightRAG(
 #     rag.insert(f.read())
 
 # Perform naive search
+query_test = "DNA是如何指导生成蛋白质的？让我们一步一步思考。"
+
 print(
-    rag.query("意识的能动作用", param=QueryParam(mode="naive"))
+    rag.query(query_test, param=QueryParam(mode="naive"))
 )
 
 # Perform local search
 print(
-    rag.query("意识的能动作用", param=QueryParam(mode="local"))
+    rag.query(query_test, param=QueryParam(mode="local"))
 )
 
 # Perform global search
 print(
-    rag.query("意识的能动作用", param=QueryParam(mode="global"))
+    rag.query(query_test, param=QueryParam(mode="global"))
 )
 
 # Perform hybrid search
 print(
-    rag.query("意识的能动作用", param=QueryParam(mode="hybrid"))
+    rag.query(query_test, param=QueryParam(mode="hybrid"))
 )

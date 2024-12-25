@@ -21,16 +21,15 @@ class MilvusVectorDBStorge(BaseVectorStorage):
             collection_name, max_length=64, id_type="string", **kwargs
         )
 
+
+
     def __post_init__(self):
         self._client = MilvusClient(
-            uri=os.environ.get(
-                "MILVUS_URI",
-                os.path.join(self.global_config["working_dir"], "milvus_lite.db"),
-            ),
-            user=os.environ.get("MILVUS_USER", ""),
-            password=os.environ.get("MILVUS_PASSWORD", ""),
-            token=os.environ.get("MILVUS_TOKEN", ""),
-            db_name=os.environ.get("MILVUS_DB_NAME", ""),
+            uri="https://in03-2b0ccd55e94f8e3.serverless.ali-cn-hangzhou.cloud.zilliz.com.cn",
+            user="db_2b0ccd55e94f8e3",
+            password="Bs5<}1tP;k]wo8<)",
+            token="c6c05bb25c62df3d44a16d47014941d2969c5f42025e53590e1f5be414a5d39915444253892813fce3685ab2665bf379b0f024a7",
+            db_name="light-rag",
         )
         self._max_batch_size = self.global_config["embedding_batch_num"]
         MilvusVectorDBStorge.create_collection_if_not_exist(
