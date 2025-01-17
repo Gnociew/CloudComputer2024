@@ -24,13 +24,22 @@ class MilvusVectorDBStorge(BaseVectorStorage):
 
 
     def __post_init__(self):
+        # 从 global_config 中获取 vector_db_storage_cls_kwargs
+        vector_db_kwargs = self.global_config.get('vector_db_storage_cls_kwargs', {})
+        # 从 vector_db_kwargs 中获取 milvus_config
+        milvus_config = vector_db_kwargs.get('milvus_config', {})
+        
+        # 使用配置创建 MilvusClient
         self._client = MilvusClient(
-            uri="https://in03-2b0ccd55e94f8e3.serverless.ali-cn-hangzhou.cloud.zilliz.com.cn",
-            user="db_2b0ccd55e94f8e3",
-            password="Bs5<}1tP;k]wo8<)",
-            token="c6c05bb25c62df3d44a16d47014941d2969c5f42025e53590e1f5be414a5d39915444253892813fce3685ab2665bf379b0f024a7",
-            db_name="light-rag",
+            uri=milvus_config.get('uri', 'https://in03-2b0ccd55e94f8e3.serverless.ali-cn-hangzhou.cloud.zilliz.com.cn'),
+            user=milvus_config.get('user', 'db_2b0ccd55e94f8e3'),
+            password=milvus_config.get('password', 'Bs5<}1tP;k]wo8<)'),
+            token=milvus_config.get('token', 'c6c05bb25c62df3d44a16d47014941d2969c5f42025e53590e1f5be414a5d39915444253892813fce3685ab2665bf379b0f024a7'),
+            db_name=milvus_config.get('db_name', 'biology'),
         )
+        print("="*100)
+        print(f"milvus_config: {milvus_config}")
+        print("="*100)
         self._max_batch_size = self.global_config["embedding_batch_num"]
         MilvusVectorDBStorge.create_collection_if_not_exist(
             self._client,

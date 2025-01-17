@@ -529,6 +529,10 @@ async def kg_query(
 
     # Build context
     keywords = [ll_keywords, hl_keywords]
+    
+    if query_param.only_need_extract_entities:
+        return keywords
+    
     context = await _build_query_context(
         keywords,
         knowledge_graph_inst,
@@ -537,6 +541,7 @@ async def kg_query(
         text_chunks_db,
         query_param,
     )
+    
 
     if query_param.only_need_context:
         return context
