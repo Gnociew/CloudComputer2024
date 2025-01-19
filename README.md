@@ -44,7 +44,11 @@ Langgraph的框架构建如下
 
 ![Langgraph](photos/Langgraph.png)
 
-该项目的聊天服务由Langgraph提供支持，并在其中集成了以下主要功能 
+Langgraph框架的数据存储服务由supabase来提供，schema如下
+
+![supabase](photos/supabase.png)
+
+接下来对框架进行具体介绍
 
 ### 工具函数
 
