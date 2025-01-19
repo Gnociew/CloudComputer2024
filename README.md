@@ -87,5 +87,6 @@ Langgraph的框架构建如下
 * [Express](https://github.com/expressjs/express) - MIT License
 * [LangGraph](https://github.com/langchain-ai/langgraph) - MIT License
 * [Tavily Search API](https://github.com/tavilysearch/tavily-python) - MIT License
+* [Streamlit](https://github.com/streamlit/streamlit) - Apache License
 
 感谢这些项目的贡献者们！
