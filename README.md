@@ -78,6 +78,10 @@ Langgraph的框架构建如下
 
 对话的模型我们选择了智谱的API来提供
 
+## 四.页面逻辑
+
+![Frontend_graph](photos/Frontend_graph.png)
+
 ## 致谢
 
 本项目使用了以下开源项目：
