@@ -14,9 +14,7 @@
 
 我们的对该项目的系统架构进行了如下的设计，并在接下来进行实现
 
-![image-20250119145459115](/Users/harry/Library/Application Support/typora-user-images/image-20250119145459115.png)
-
-
+![system](photos/system.png)
 
 ## 三.技术实现
 
@@ -24,7 +22,7 @@
 
 Langgraph的框架构建如下
 
-![image-20250119145714521](/Users/harry/Library/Application Support/typora-user-images/image-20250119145714521.png)
+![Langgraph](photos/Langgraph.png)
 
 该项目的聊天服务由Langgraph提供支持，并在其中集成了以下主要功能 
 
