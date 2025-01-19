@@ -1,0 +1,7 @@
+psycopg
+psycopg-pool
+langgraph
+langgraph-checkpoint-postgres
+streamlit
+langchain
+langchain_community
