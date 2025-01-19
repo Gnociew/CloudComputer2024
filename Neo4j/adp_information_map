@@ -1,0 +1,23 @@
+// ADP Information Map
+digraph {
+	node [fontname="WenQuanYi Micro Hei"]
+	edge [fontname="WenQuanYi Micro Hei"]
+	encoding="utf-8" fontname="WenQuanYi Micro Hei"
+	root [label=ADP]
+	root_Descriptions [label=Descriptions fontname=SimSun]
+	root -> root_Descriptions
+	"root_Descriptions_ADP_是_ATP_水解后形成的产物，参与细胞内能量代谢，是能量转移的中间形式。" [label="ADP 是 ATP 水解后形成的产物，参与细胞内能量代谢，是能量转移的中间形式。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP_是_ATP_水解后形成的产物，参与细胞内能量代谢，是能量转移的中间形式。"
+	"root_Descriptions_ADP_是_ATP_水解后形成的产物，参与能量代谢。" [label="ADP 是 ATP 水解后形成的产物，参与能量代谢。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP_是_ATP_水解后形成的产物，参与能量代谢。"
+	"root_Descriptions_ADP是光合作用中的一种能量载体，参与能量转换。" [label="ADP是光合作用中的一种能量载体，参与能量转换。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP是光合作用中的一种能量载体，参与能量转换。"
+	"root_Descriptions_ADP是腺苷二磷酸，是一种能量储存和传递的分子。" [label="ADP是腺苷二磷酸，是一种能量储存和传递的分子。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP是腺苷二磷酸，是一种能量储存和传递的分子。"
+	"root_Descriptions_ADP（二磷酸腺苷）是文中提到的能量分子，与ATP相关。" [label="ADP（二磷酸腺苷）是文中提到的能量分子，与ATP相关。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP（二磷酸腺苷）是文中提到的能量分子，与ATP相关。"
+	"root_Descriptions_ADP（腺苷二磷酸）是ATP分解后的产物，可以在细胞内重新合成ATP。" [label="ADP（腺苷二磷酸）是ATP分解后的产物，可以在细胞内重新合成ATP。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP（腺苷二磷酸）是ATP分解后的产物，可以在细胞内重新合成ATP。"
+	"root_Descriptions_ADP（腺苷二磷酸）是一种含有高能磷酸键的核苷酸，在此过程中，它与Pi（无机磷酸盐）反应生成AITP。" [label="ADP（腺苷二磷酸）是一种含有高能磷酸键的核苷酸，在此过程中，它与Pi（无机磷酸盐）反应生成AITP。" fontname=SimSun]
+	root_Descriptions -> "root_Descriptions_ADP（腺苷二磷酸）是一种含有高能磷酸键的核苷酸，在此过程中，它与Pi（无机磷酸盐）反应生成AITP。"
+}
