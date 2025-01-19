@@ -86,9 +86,6 @@ Langgraph的框架构建如下
 
 本项目使用了以下开源项目：
 
-* [React](https://github.com/facebook/react) - MIT License
-* [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - MIT License
-* [Express](https://github.com/expressjs/express) - MIT License
 * [LangGraph](https://github.com/langchain-ai/langgraph) - MIT License
 * [Tavily Search API](https://github.com/tavilysearch/tavily-python) - MIT License
 * [Streamlit](https://github.com/streamlit/streamlit) - Apache License
