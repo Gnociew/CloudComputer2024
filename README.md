@@ -142,7 +142,6 @@ Langgraph框架的数据存储服务由supabase来提供，schema如下
 ![Frontend_graph](photos/Frontend_graph.png)
 
 
-
 ## 致谢
 
 本项目使用了以下开源项目：
