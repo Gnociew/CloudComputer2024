@@ -36,7 +36,9 @@
 
 ![system](photos/system.png)
 
-## 三.技术实现
+## 三.相关技术
+
+## 四.技术实现
 
 ## 3.Langgraph框架的构建
 
@@ -82,9 +84,13 @@ Langgraph框架的数据存储服务由supabase来提供，schema如下
 
 对话的模型我们选择了智谱的API来提供
 
-## 四.页面逻辑
+## 五.页面逻辑
 
 ![Frontend_graph](photos/Frontend_graph.png)
+
+## 六.前端页面展示
+
+
 
 ## 致谢
 
