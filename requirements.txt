@@ -3,5 +3,6 @@ psycopg-pool
 langgraph
 langgraph-checkpoint-postgres
 streamlit
+streamlit_option_menu
 langchain
 langchain_community
