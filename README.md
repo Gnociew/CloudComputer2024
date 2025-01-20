@@ -147,7 +147,7 @@ Langgraph框架的数据存储服务由supabase来提供，schema如下
 本项目使用了以下开源项目：
 
 * [LangGraph](https://github.com/langchain-ai/langgraph) - MIT License
-* [Tavily Search API](https://github.com/tavilysearch/tavily-python) - MIT License
+* [Tavily Search API](https://github.com/tavily-ai/tavily-python) - MIT License
 * [Streamlit](https://github.com/streamlit/streamlit) - Apache License
 
 感谢这些项目的贡献者们！
