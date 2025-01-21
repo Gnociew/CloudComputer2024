@@ -1,0 +1,26 @@
+// 蛋白质 Information Map
+digraph {
+	graph [nodesep=1.0 rankdir=LR ranksep=1.5 splines=ortho]
+	encoding="utf-8" fontname="WenQuanYi Micro Hei"
+	node [color="#00796B" fillcolor="#E0F7FA" fontname="WenQuanYi Micro Hei" fontsize=12 shape=box style="rounded,filled"]
+	edge [arrowsize=0.5 color="#00796B" fontname="WenQuanYi Micro Hei"]
+	root [label="蛋白质" fillcolor="#00796B" fontcolor=white fontsize=14 shape=ellipse]
+	"root_知识点" [label="知识点" fontname=SimSun]
+	root -> "root_知识点"
+	"root_知识点_蛋白质是生命活动的主要承担者，细胞的基本组成成分。" [label="蛋白质是生命活动的主要承担者，细胞的基本组成成分。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质是生命活动的主要承担者，细胞的基本组成成分。"
+	"root_知识点_蛋白质是细胞中含量最多的有机化合物。" [label="蛋白质是细胞中含量最多的有机化合物。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质是细胞中含量最多的有机化合物。"
+	"root_知识点_蛋白质是由氨基酸组成的生物大分子，具有多种功能。" [label="蛋白质是由氨基酸组成的生物大分子，具有多种功能。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质是由氨基酸组成的生物大分子，具有多种功能。"
+	"root_知识点_蛋白质是生命活动的主要承担者，参与组成细胞结构、催化、运输、信息传递、免疫等重要功能。" [label="蛋白质是生命活动的主要承担者，参与组成细胞结构、催化、运输、信息传递、免疫等重要功能。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质是生命活动的主要承担者，参与组成细胞结构、催化、运输、信息传递、免疫等重要功能。"
+	"root_知识点_蛋白质是由氨基酸通过肽键连接而成的化合物，具有复杂的三维结构。" [label="蛋白质是由氨基酸通过肽键连接而成的化合物，具有复杂的三维结构。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质是由氨基酸通过肽键连接而成的化合物，具有复杂的三维结构。"
+	"root_知识点_蛋白质的种类繁多，功能多样，是生物体内重要的功能分子。" [label="蛋白质的种类繁多，功能多样，是生物体内重要的功能分子。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质的种类繁多，功能多样，是生物体内重要的功能分子。"
+	"root_知识点_蛋白质的合成需要能量，并且受到遗传信息的指导。" [label="蛋白质的合成需要能量，并且受到遗传信息的指导。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质的合成需要能量，并且受到遗传信息的指导。"
+	"root_知识点_蛋白质的空间结构对其功能至关重要，结构改变可能导致功能丧失或改变。" [label="蛋白质的空间结构对其功能至关重要，结构改变可能导致功能丧失或改变。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_蛋白质的空间结构对其功能至关重要，结构改变可能导致功能丧失或改变。"
+}

@@ -1,0 +1,44 @@
+// 光合作用 Information Map
+digraph {
+	graph [nodesep=1.0 rankdir=LR ranksep=1.5 splines=ortho]
+	encoding="utf-8" fontname="WenQuanYi Micro Hei"
+	node [color="#00796B" fillcolor="#E0F7FA" fontname="WenQuanYi Micro Hei" fontsize=12 shape=box style="rounded,filled"]
+	edge [arrowsize=0.5 color="#00796B" fontname="WenQuanYi Micro Hei"]
+	root [label="光合作用" fillcolor="#00796B" fontcolor=white fontsize=14 shape=ellipse]
+	"root_知识点" [label="知识点" fontname=SimSun]
+	root -> "root_知识点"
+	"root_知识点_光合作用是植物和某些细菌利用光能合成有机物的过程。" [label="光合作用是植物和某些细菌利用光能合成有机物的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是植物和某些细菌利用光能合成有机物的过程。"
+	"root_知识点_光合作用中，植物将光能转化为化学能。" [label="光合作用中，植物将光能转化为化学能。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用中，植物将光能转化为化学能。"
+	"root_知识点_光合作用通过叶绿体将光能转化为化学能。" [label="光合作用通过叶绿体将光能转化为化学能。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用通过叶绿体将光能转化为化学能。"
+	"root_知识点_光合作用是生物捕获和转化光能的过程。" [label="光合作用是生物捕获和转化光能的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是生物捕获和转化光能的过程。"
+	"root_知识点_光合作用将光能转化为化学能的过程，并释放氧气。" [label="光合作用将光能转化为化学能的过程，并释放氧气。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用将光能转化为化学能的过程，并释放氧气。"
+	"root_知识点_光合作用通过叶绿体产生淀粉，作为植物体内的储能物质。" [label="光合作用通过叶绿体产生淀粉，作为植物体内的储能物质。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用通过叶绿体产生淀粉，作为植物体内的储能物质。"
+	"root_知识点_光合作用中，光能用于将二氧化碳和水转化为储存能量的有机物。" [label="光合作用中，光能用于将二氧化碳和水转化为储存能量的有机物。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用中，光能用于将二氧化碳和水转化为储存能量的有机物。"
+	"root_知识点_光合作用是绿色植物利用光能将二氧化碳和水转化成储存能量的有机物的过程。" [label="光合作用是绿色植物利用光能将二氧化碳和水转化成储存能量的有机物的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是绿色植物利用光能将二氧化碳和水转化成储存能量的有机物的过程。"
+	"root_知识点_光合作用中，光能用于暗反应，产生能量载体ATP和NADPH。" [label="光合作用中，光能用于暗反应，产生能量载体ATP和NADPH。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用中，光能用于暗反应，产生能量载体ATP和NADPH。"
+	"root_知识点_光合作用是细胞内能量转移的重要过程，涉及ATP和NADPH的生成。" [label="光合作用是细胞内能量转移的重要过程，涉及ATP和NADPH的生成。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是细胞内能量转移的重要过程，涉及ATP和NADPH的生成。"
+	"root_知识点_光合作用是生物体内能量转换的关键过程，将光能转化为化学能。" [label="光合作用是生物体内能量转换的关键过程，将光能转化为化学能。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是生物体内能量转换的关键过程，将光能转化为化学能。"
+	"root_知识点_光合作用是绿色植物通过叶绿体进行的能量转换过程。" [label="光合作用是绿色植物通过叶绿体进行的能量转换过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是绿色植物通过叶绿体进行的能量转换过程。"
+	"root_知识点_光合作用是生物体内利用光能合成有机物的过程。" [label="光合作用是生物体内利用光能合成有机物的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是生物体内利用光能合成有机物的过程。"
+	"root_知识点_光合作用是植物通过光合作用产生能量的过程。" [label="光合作用是植物通过光合作用产生能量的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是植物通过光合作用产生能量的过程。"
+	"root_知识点_光合作用是生物体内将光能转化为化学能并储存的过程。" [label="光合作用是生物体内将光能转化为化学能并储存的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是生物体内将光能转化为化学能并储存的过程。"
+	"root_知识点_光合作用是植物通过叶绿体将光能转化为化学能的过程。" [label="光合作用是植物通过叶绿体将光能转化为化学能的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是植物通过叶绿体将光能转化为化学能的过程。"
+	"root_知识点_光合作用是绿色植物通过光合作用产生有机物的过程。" [label="光合作用是绿色植物通过光合作用产生有机物的过程。" fontname=SimSun]
+	"root_知识点" -> "root_知识点_光合作用是绿色植物通过光合作用产生有机物的过程。"
+}
