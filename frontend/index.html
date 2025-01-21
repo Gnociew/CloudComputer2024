@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LangChain 数学解题原型</title>
+  <style>
+    /* 页面样式 */
+    body {
+      font-family: Arial, sans-serif; 
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    h1, h2 {
+      margin-bottom: 10px;
+      color: #2f4b66;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 50px;
+      resize: vertical;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #2f8dcb;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #1d6b98;
+    }
+
+    .result {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #e1e5ea;
+      border-radius: 4px;
+      background: #f9fafc;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LangChain 数学解题原型</h1>
+    <p>输入数学题目，获取解题提示并提交答案进行验证。</p>
+
+    <!-- 输入题目 -->
+    <div class="section">
+      <h2>1. 输入题目</h2>
+      <textarea id="questionInput" placeholder="例如：2x + 3 = 7"></textarea>
+      <button id="getHintBtn">获取解题提示</button>
+      <div id="hintResult" class="result"></div>
+    </div>
+
+    <!-- 提交答案 -->
+    <div class="section">
+      <h2>2. 提交答案</h2>
+      <textarea id="answerInput" placeholder="请输入答案，如：x = 2"></textarea>
+      <button id="verifyAnswerBtn">提交答案</button>
+      <div id="verifyResult" class="result"></div>
+    </div>
+
+      <!-- 生成方程图像 -->
+    <div class="section">
+      <h2>3. 生成方程图像</h2>
+      <button id="plotEquationBtn">生成图像</button>
+      <div id="equationPlot" class="result"></div>
+    </div>
+  </div>
+
+  <script>
+    // 全局变量，用于保存当前的 question_id
+    let currentQuestionId = null;
+
+    // 获取解题提示
+    document.getElementById('getHintBtn').addEventListener('click', async () => {
+      const questionInput = document.getElementById('questionInput');
+      const hintResult = document.getElementById('hintResult');
+
+      const question = questionInput.value.trim();
+      if (!question) {
+        hintResult.textContent = '请输入题目内容！';
+        return;
+      }
+
+      // 显示加载状态
+      hintResult.textContent = '正在获取解题提示，请稍候...';
+
+      try {
+        const response = await fetch('/api/generate_hint', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: question })
+        });
+        const data = await response.json();
+
+        if (data.error) {
+          hintResult.textContent = `错误: ${data.error}`;
+        } else {
+          // 显示提示并保存 question_id
+          hintResult.textContent = data.hint;
+          currentQuestionId = data.question_id; // 保存后端返回的 question_id
+        }
+      } catch (error) {
+        hintResult.textContent = '获取提示失败，请检查网络连接或联系管理员。';
+        console.error('Error:', error);
+      }
+    });
+
+    // 提交答案
+    document.getElementById('verifyAnswerBtn').addEventListener('click', async () => {
+      const questionInput = document.getElementById('questionInput');
+      const answerInput = document.getElementById('answerInput');
+      const verifyResult = document.getElementById('verifyResult');
+
+      const question = questionInput.value.trim();
+      const answer = answerInput.value.trim();
+
+      if (!question || !answer) {
+        verifyResult.textContent = '请填写题目和答案！';
+        return;
+      }
+
+      // 显示加载状态
+      verifyResult.textContent = '正在验证答案，请稍候...';
+
+      try {
+        const response = await fetch('/api/verify_answer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            question: question,
+            answer: answer,
+            question_id: currentQuestionId // 提交保存的 question_id
+          })
+        });
+        const data = await response.json();
+
+        if (data.error) {
+          verifyResult.textContent = `错误: ${data.error}`;
+        } else {
+          verifyResult.textContent = data.verification;
+        }
+      } catch (error) {
+        verifyResult.textContent = '验证失败，请检查网络连接或联系管理员。';
+        console.error('Error:', error);
+      }
+    });
+
+    document.getElementById('plotEquationBtn').addEventListener('click', async () => {
+      const questionInput = document.getElementById('questionInput');
+      const equationPlot = document.getElementById('equationPlot');
+
+      const equation = questionInput.value.trim();
+      if (!equation) {
+        equationPlot.textContent = '请输入方程内容！';
+        return;
+      }
+
+      // 显示加载状态
+      equationPlot.textContent = '正在生成图像，请稍候...';
+
+      try {
+        const response = await fetch('/api/plot_equation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ equation: equation })
+        });
+        const data = await response.json();
+
+        if (data.error) {
+          equationPlot.textContent = `错误: ${data.error}`;
+        } else {
+          // 显示图像
+          equationPlot.innerHTML = `<img src="data:image/png;base64,${data.image}" alt="Equation Plot" />`;
+        }
+      } catch (error) {
+        equationPlot.textContent = '生成图像失败，请检查网络连接或联系管理员。';
+        console.error('Error:', error);
+      }
+    });
+  </script>
+</body>
+</html>
