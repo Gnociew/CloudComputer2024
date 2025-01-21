@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手语教学系统 - AI 辅助学习平台</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/globals.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="page-transition">
+    <div class="app-container">
+        <nav class="top-nav breathing-glow">
+            <div class="nav-brand">
+                <i class="ri-sign-language-line"></i>
+                <span>SignSpark</span>
+                <div class="nav-buttons">
+                    <button class="nav-btn active" data-tab="translation">实时翻译</button>
+                    <button class="nav-btn" data-tab="teaching">手语教学</button>
+                    <button class="nav-btn" data-tab="practice">手语查询</button>
+                </div>
+            </div>
+            <div class="nav-controls">
+                <div class="theme-toggle">
+                    <i class="ri-sun-line"></i>
+                </div>
+                <div class="avatar">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="用户头像">
+                </div>
+                <div class="profile-popup">
+                    <div class="profile-header">
+                        <img src="/static/images/avatar.png" alt="用户头像" class="profile-avatar">
+                        <div>
+                            <div class="profile-name">张三</div>
+                            <div class="profile-role">学生用户</div>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>zhangsan@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>学习时长：120小时</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>完成课程：15门</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <div class="profile-btn settings">
+                            <i class="fas fa-cog"></i> 设置
+                        </div>
+                        <div class="profile-btn logout">
+                            <i class="fas fa-sign-out-alt"></i> 退出
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- 实时翻译标签页 -->
+            <div class="tab-content active" id="translation">
+                <div class="content-wrapper">
+                    <section class="video-section">
+                        <div class="video-container wave-animation">
+                            <div class="video-status">
+                                <span class="status-badge">
+                                    <i class="ri-live-line"></i> 实时演示
+                                </span>
+                                <span class="quality-badge">HD</span>
+                            </div>
+
+                            <div class="video-player">
+                                <div class="video-container">
+                                    <img src="{{ url_for('shuwa.video_feed') }}" id="videoFeed">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="learning-section">
+                        <div class="video-info">
+                            <div class="controls">
+                                <div class="mode-controls">
+                                    <button id="recordModeBtn" class="mode-btn active">录制模式</button>
+                                    <button id="translateModeBtn" class="mode-btn">翻译模式</button>
+                                </div>
+                                <div id="recordControls">
+                                    <input type="text" id="signNameInput" placeholder="输入手语名称">
+                                    <button id="recordBtn">开始录制</button>
+                                </div>
+                                <div id="translateControls" style="display: none;">
+                                    <div class="translate-controls">
+                                        <div class="mode-switch">
+                                            <label class="switch">
+                                                <input type="checkbox" id="continuousMode">
+                                                <span class="slider"></span>
+                                                <span class="switch-label">连续翻译模式</span>
+                                            </label>
+                                        </div>
+                                        <button id="translateBtn">开始翻译</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="results">
+                                <textarea id="output" readonly></textarea>
+                            </div>
+                        </div>
+
+                        <div class="learning-tabs">
+                            <button class="tab-btn active">手语练习</button>
+                            <button class="tab-btn floating">学习笔记</button>
+                            <button class="tab-btn floating">相关词汇</button>
+                        </div>
+
+                        <div class="practice-area">
+                            <div class="input-group">
+                                <div class="input-label">
+                                    <!-- <span>输入 Gloss 词</span> -->
+                                    <div class="tooltip" data-tooltip="Gloss词是手语的书面表示方式">
+                                        <i class="ri-question-line"></i>
+                                    </div>
+                                </div>
+                                <div class="input-with-button">
+                                    <input type="text" id="gloss_input" class="modern-input"
+                                        placeholder="输入 gloss 词，用空格分隔" value="">
+                                    <button onclick="generateSentence()" class="generate-btn ripple">
+                                        <i class="ri-translate-2"></i>
+                                        <!-- <span>生成句子</span> -->
+                                    </button>
+                                    <button onclick="clearGlossInput()" class="generate-btn ripple">
+                                        <i class="ri-delete-bin-line"></i>
+                                        <!-- <span>清空</span> -->
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="notesSection" class="notes-section" style="display: none;">
+                                <textarea id="notesTextarea" class="notes-textarea"
+                                    placeholder="在这里写下你的学习笔记..."></textarea>
+                                <button onclick="saveNotes()" class="save-notes-btn">保存笔记</button>
+                            </div>
+
+                            <div class="result-card">
+                                <div class="result-header">
+                                    <h3>生成结果</h3>
+                                    <span class="confidence-score">
+                                        置信度 95%
+                                    </span>
+                                </div>
+                                <div id="generated_sentence" class="result-content">
+                                    <p>我去上学。不过原"I GO SCHOOL"在英语语法上不太准确，比较符合英语表达习惯的应该是"I go to school"。</p>
+                                </div>
+                                <div class="result-actions">
+                                    <button class="action-btn" onclick="readGeneratedText()">
+                                        <i class="ri-sound-module-line"></i>
+                                        <span>朗读/暂停</span>
+                                    </button>
+                                    <button class="action-btn" onclick="copyText(document.getElementById('generated_sentence').innerText)">
+                                        <i class="ri-file-copy-line"></i>
+                                        复制
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="ri-share-line"></i>
+                                        分享
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="learning-stats">
+                                <div class="stat-card hover-card">
+                                    <i class="ri-time-line"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value">45</span>
+                                        <span class="stat-label">学习分钟</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card hover-card">
+                                    <i class="ri-chat-check-line"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value">12</span>
+                                        <span class="stat-label">完成句子</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card hover-card">
+                                    <i class="ri-medal-line"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value">89</span>
+                                        <span class="stat-label">准确率</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recommended-entries" style="display: none;">
+                                <div class="section-header">
+                                    <h3>推荐手语词条</h3>
+                                    <button class="refresh-btn">
+                                        <i class="ri-refresh-line"></i>
+                                        <span>换一批</span>
+                                    </button>
+                                </div>
+                                <div class="entries-grid">
+                                    <!-- Entries will be dynamically populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+<!-- 手语教学标签页 -->
+<div class="tab-content" id="teaching">
+    <div class="teaching-content-wrapper">
+        <!-- 左侧内容区域 -->
+        <div class="main-content-area">
+            <!-- 课程卡片网格 -->
+            <div class="course-cards-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-hand-heart-line"></i>
+                    </div>
+                    <h3>基础手语入门</h3>
+                    <p>学习日常生活中最常用的手语表达方式，适合初学者。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-chat-smile-3-line"></i>
+                    </div>
+                    <h3>日常对话进阶</h3>
+                    <p>掌握更复杂的手语对话技巧，提升交流能力。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-emotion-happy-line"></i>
+                    </div>
+                    <h3>情感表达专题</h3>
+                    <p>学习如何用手语表达丰富的情感和细腻的感受。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-book-read-line"></i>
+                    </div>
+                    <h3>专业术语学习</h3>
+                    <p>掌握特定领域的专业手语词汇和表达方式。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-group-line"></i>
+                    </div>
+                    <h3>手语文化交流</h3>
+                    <p>了解手语社群文化，参与线上线下交流活动，提升实战经验。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+                
+                <!-- 新增的第6个课程卡片 -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-video-chat-line"></i>
+                    </div>
+                    <h3>视频实践教学</h3>
+                    <p>通过真实场景视频学习手语应用，提供互动练习和即时反馈。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+
+                <!-- 第7个课程卡片 -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-team-line"></i>
+                    </div>
+                    <h3>手语翻译培训</h3>
+                    <p>专业的手语翻译技能培训，为有志于成为手语翻译的学习者提供系统指导。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+                
+                <!-- 第8个课程卡片 -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="ri-global-line"></i>
+                    </div>
+                    <h3>国际手语交流</h3>
+                    <p>学习国际通用手语，了解不同国家的手语文化，拓展国际交流视野。</p>
+                    <button class="start-btn">
+                        <i class="ri-play-circle-line"></i>
+                        开始学习
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧学习计划 -->
+        <div class="learning-plan-sidebar">
+            <div class="learning-plan-section">
+                <h2>个性化学习计划</h2>
+                <div class="plan-content">
+                    
+                    
+                    <div class="schedule-item">
+                        <div class="time">09:00 - 10:00</div>
+                        <div class="course">
+                            <strong>基础手势练习</strong>
+                            <p>重点掌握日常生活中最常用的20个基础手势，包括问候、感谢等基本表达。通过反复练习建立肌肉记忆。</p>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="time">11:00 - 12:00</div>
+                        <div class="course">
+                            <strong>日常对话练习</strong>
+                            <p>进行简单的日常对话训练，重点是语速控制和手势流畅度的提升。</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="schedule-item">
+                        <div class="time">14:00 - 15:00</div>
+                        <div class="course">
+                            <strong>情感表达训练</strong>
+                            <p>学习如何通过手势表达喜、怒、哀、乐等基本情感，注重表情和手势的配合。</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="learning-progress-section">
+                <h3>学习进度</h3>
+                <div class="progress-items">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>基础手势练习</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill completed"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>日常对话练习</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill in-progress" style="width: 30%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>情感表达训练</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>专业术语学习</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="tab-content" id="practice">
+            <div class="practice-container">
+                <!-- Left Section -->
+                <div class="practice-section search-section">
+                    <div class="section-header">
+                        <h2>手语查询</h2>
+                        <p class="subtitle">输入手语名称查看示范视频</p>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="请输入手语名称..." class="search-input" id="keywordInput" value="你好">
+                        <button class="search-button" id="submitButton">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                    
+                
+                    <!-- 引入 JavaScript 文件 -->
+                    <script src="{{ url_for('static', filename='js/trans.js') }}"></script>
+
+                    <div class="recent-searches">
+                        <h3>最近搜索</h3>
+                        <div class="search-tags">
+                            <span class="search-tag">你好</span>
+                            <span class="search-tag">谢谢</span>
+                            <span class="search-tag">再见</span>
+                        </div>
+                    </div>
+
+                    <!-- 添加视频描述区域 -->
+                    <div class="video-description">
+                        <h3>视频描述</h3>
+                        <div class="description-content" id="videoDescription">                     
+                            <p id="answer"></p>           
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Right Section -->
+                <div class="practice-section video-section">
+                    <div class="video-container">
+                        <div class="video-placeholder" id="videoPlaceholder">
+                            <i class="ri-film-line"></i>
+                            <p>请在左侧输入要查询的手语名称</p>
+                        </div>
+                        <video id="videoPlayer" controls autoplay loop style="max-width: 100%;; display: none;"></video>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="entryDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="video-container wave-animation">
+                <div class="video-player">
+                    <div id="videoPlaceholder" class="video-placeholder">
+                        <i class="ri-film-line"></i>
+                        <span>手语教学视频</span>
+                    </div>
+                    <video id="modalVideo" controls style="display: none;">
+                        <source src="" type="video/mp4">
+                        您的浏览器不支持 HTML5 视频。
+                    </video>
+                </div>
+            </div>
+            <div class="entry-details">
+                <p id="modalDescription"></p>
+                <div class="entry-info">
+                    <span id="modalCategory" class="entry-tag"></span>
+                    <span id="modalDifficulty" class="difficulty"></span>
+                </div>
+                <p id="modalGloss" class="entry-gloss"></p>
+            </div>
+            <button class="generate-btn ripple" onclick="startPractice()">
+                <i class="ri-play-circle-line"></i>
+                <span>开始练习</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="loading" class="loading-overlay">
+        <div class="loader">
+            <svg class="loader-svg" viewBox="0 0 50 50">
+                <circle class="loader-circle" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+            </svg>
+            <span>生成中...</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <div class="profile-popup">
+        <div class="profile-header">
+            <img src="/static/images/avatar.png" alt="用户头像" class="profile-avatar">
+            <div>
+                <div class="profile-name">张三</div>
+                <div class="profile-role">学生用户</div>
+            </div>
+        </div>
+        <div class="profile-info">
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>zhangsan@example.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>学习时长：120小时</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-star"></i>
+                <span>完成课程：15门</span>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <div class="profile-btn settings">
+                <i class="fas fa-cog"></i> 设置
+            </div>
+            <div class="profile-btn logout">
+                <i class="fas fa-sign-out-alt"></i> 退出
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

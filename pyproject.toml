@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shuwa"
+version = "0.1.0"
+description = "Sign Language Recognition System"
+dependencies = [
+    "flask",
+    "flask-cors",
+    "opencv-python",
+    "numpy",
+    "tensorflow-macos",
+    "tensorflow-metal",
+    "mediapipe",
+    "typing-extensions>=4.12.2"
+] 

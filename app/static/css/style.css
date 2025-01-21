@@ -1,0 +1,840 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-container {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+#videoFeed {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+/* 统一按钮基础样式 */
+button,
+.mode-btn,
+.nav-btn,
+#recordBtn, 
+#translateBtn,
+#startTranslateBtn,
+.save-notes-btn,
+.generate-btn,
+.tab-btn,
+.start-btn {
+    background: rgba(82, 109, 255, 0.25) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(82, 109, 255, 0.3) !important;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+    height: 36px;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+/* 统一按钮悬停效果 */
+button:hover,
+.mode-btn:hover,
+.nav-btn:hover,
+#recordBtn:hover,
+#translateBtn:hover,
+#startTranslateBtn:hover,
+.save-notes-btn:hover,
+.generate-btn:hover,
+.tab-btn:hover,
+.start-btn:hover {
+    background: rgba(82, 109, 255, 0.35) !important;
+    transform: translateY(-1px);
+}
+
+/* 删除或注释掉其他可能覆盖按钮样式的代码 */
+/* 
+.mode-btn,
+#recordBtn,
+.save-notes-btn 等其他特定按钮样式
+*/
+
+.results {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#output {
+    width: 97%;
+    height: 32px;
+    padding: 4px 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    resize: none;
+    background: rgba(41, 37, 88, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#signNameInput {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    height: 32px;
+    line-height: 24px;
+    box-sizing: border-box;
+}
+
+#modeSelect {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mode-controls {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+.mode-btn {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 40px;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+}
+
+.mode-btn.active {
+    background: rgba(82, 109, 255, 0.25);
+    border: 1px solid rgba(82, 109, 255, 0.3);
+}
+
+.mode-btn:hover {
+    background: rgba(82, 109, 255, 0.2);
+}
+
+#recordControls, #translateControls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 导航栏样式更新 */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-brand span {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-brand i {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 30px;
+    height: 45px;
+    align-items: center;
+}
+
+.nav-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.nav-btn:hover {
+    background: rgba(82, 109, 255, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(82, 109, 255, 0.2);
+}
+
+.nav-btn.active {
+    background: linear-gradient(135deg, rgba(82, 109, 255, 0.4), rgba(82, 109, 255, 0.2));
+    border: 1px solid rgba(82, 109, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(82, 109, 255, 0.25);
+}
+
+.mode-switch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-right: 8px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgba(82, 109, 255, 0.5);
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.switch-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.video-description {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.video-description h3 {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.description-content {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.video-section {
+    flex: 1;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wave-animation {
+    width: 100%;
+    height: 100%;
+}
+
+/* 课程卡片样式调整 */
+.course-card {
+    background: rgba(41, 37, 88, 0.3);  /* 深色半透明背景 */
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(41, 37, 88, 0.4);  /* 悬停时更深 */
+}
+
+/* 学习计划侧边栏背景调整 */
+.learning-plan-sidebar {
+    background: rgba(41, 37, 88, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 课程时间表项目背景调整 */
+.schedule-item {
+    background: rgba(41, 37, 88, 0.25);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 学习进度区域背景调整 */
+.learning-progress-section {
+    background: rgba(41, 37, 88, 0.25);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* 图标容器背景调整 */
+.course-icon {
+    background: rgba(41, 37, 88, 0.35);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 进度条背景调整 */
+.progress-bar {
+    background: rgba(255, 255, 255, 0.08);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* 文字颜色调整 */
+.course-card h3,
+.course-card p,
+.schedule-item strong,
+.schedule-item p,
+.learning-progress-section h3 {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 添加微妙的边框效果 */
+.course-card,
+.learning-plan-sidebar,
+.schedule-item,
+.learning-progress-section {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 搜索区域背景调整 */
+.practice-section.search-section {
+    background: rgba(41, 37, 88, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 视频展示区域背景调整 */
+.practice-section.video-section {
+    background: rgba(41, 37, 88, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 搜索框背景调整 */
+.search-box input {
+    background: rgba(41, 37, 88, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 最近搜索标签背景调整 */
+.search-tag {
+    background: rgba(41, 37, 88, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 视频描述区域背景调整 */
+.video-description {
+    background: rgba(41, 37, 88, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 视频占位符背景调整 */
+.video-placeholder {
+    background: rgba(41, 37, 88, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 确保文字在深色背景上清晰可见 */
+.section-header h2,
+.section-header p,
+.video-description h3,
+.description-content,
+.current-sign,
+.search-tag {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 输入框样式 */
+#signNameInput, #gloss_input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+#signNameInput:focus, #gloss_input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(82, 109, 255, 0.5);
+    outline: none;
+}
+
+/* 标签按钮样式 */
+.tab-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: rgba(82, 109, 255, 0.25);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.tab-btn:hover {
+    background: rgba(82, 109, 255, 0.2);
+}
+
+/* 笔记区域样式 */
+#notesTextarea, .notes-textarea {
+    width: 95%;
+    min-height: 150px;
+    padding: 15px;
+    background: rgba(41, 37, 88, 0.25);  /* 改为与其他区域相协调的深色背景 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.95);  /* 文字颜色改为白色 */
+    resize: vertical;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+#notesTextarea:focus, .notes-textarea:focus {
+    outline: none;
+    border-color: rgba(82, 109, 255, 0.5);
+    background: rgba(41, 37, 88, 0.3);
+}
+
+/* 笔记区域的占位符文字样式 */
+#notesTextarea::placeholder, .notes-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 调整手语练习等标签按钮的上方间距 */
+.learning-tabs {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: flex-start;
+    border: none;
+}
+
+.learning-tabs button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(82, 109, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 120px;
+    width: auto;
+    height: 40px;
+    backdrop-filter: blur(5px);
+    border-bottom: none;
+}
+
+.learning-tabs button:hover {
+    background: rgba(82, 109, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(82, 109, 255, 0.15);
+}
+
+.learning-tabs button.active {
+    background: rgba(82, 109, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(82, 109, 255, 0.2);
+}
+
+/* 按钮图标样式 */
+.learning-tabs button i {
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+/* 隐藏滚动条但保持滚动功能 */
+.practice-area {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.practice-area::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari and Opera */
+}
+
+/* 美化滚动条 */
+.practice-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.practice-area::-webkit-scrollbar-track {
+    background: rgba(41, 37, 88, 0.2);
+    border-radius: 3px;
+}
+
+.practice-area::-webkit-scrollbar-thumb {
+    background: rgba(82, 109, 255, 0.3);
+    border-radius: 3px;
+}
+
+.practice-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(82, 109, 255, 0.4);
+}
+
+/* Firefox */
+.practice-area {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(82, 109, 255, 0.3) rgba(41, 37, 88, 0.2);
+}
+
+/* 头像样式 */
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.avatar img:hover {
+    border-color: rgba(82, 109, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* 个人信息弹窗 */
+.profile-popup {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+    background: rgba(20, 20, 40, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    display: none;
+    pointer-events: auto;
+    transform-origin: top right;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-popup.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgba(82, 109, 255, 0.8);
+    box-shadow: 0 0 10px rgba(82, 109, 255, 0.3);
+}
+
+.profile-name {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.profile-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    gap: 10px;
+}
+
+.profile-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.profile-btn.settings {
+    background: rgba(82, 109, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 8px rgba(82, 109, 255, 0.2);
+}
+
+.profile-btn.logout {
+    background: rgba(255, 59, 48, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 8px rgba(255, 59, 48, 0.2);
+}
+
+.profile-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 添加定位上下文 */
+.nav-controls {
+    position: relative;
+    z-index: 99999;  /* 提高导航控制区域的层级 */
+}
+
+/* 确保头像也在高层级 */
+.avatar {
+    position: relative;
+    z-index: 99999;
+}
+
+/* 添加模糊背景遮罩 */
+.profile-popup::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: auto;
+    will-change: opacity;
+}
+
+/* 确保其他容器不会覆盖弹窗 */
+.app-container,
+.main-content,
+.content-wrapper,
+.video-section,
+.learning-section {
+    position: relative;
+    z-index: 1;  /* 降低其他容器的层级 */
+}
+
+/* 添加弹窗显示时的样式 */
+.profile-popup.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* 确保所有图标都清晰可见 */
+.info-item i {
+    color: rgba(82, 109, 255, 0.9);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 导航栏整体调整 */
+.top-nav {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+}
+
+/* 开始翻译按钮样式调整 */
+#translateBtn {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 1;
+    border-radius: 6px;
+    background: linear-gradient(135deg, rgba(82, 109, 255, 0.4), rgba(82, 109, 255, 0.2));
+    border: 1px solid rgba(82, 109, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(82, 109, 255, 0.15);
+}
+
+#translateBtn:hover {
+    background: linear-gradient(135deg, rgba(82, 109, 255, 0.5), rgba(82, 109, 255, 0.3));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(82, 109, 255, 0.25);
+}
+
+/* 底部按钮组样式调整 */
+.bottom-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* 底部按钮样式 */
+.bottom-buttons button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(82, 109, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;  /* 让按钮平均分配宽度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 120px;  /* 设置最小宽度 */
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.bottom-buttons button:hover {
+    background: rgba(82, 109, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(82, 109, 255, 0.15);
+}
+
+.bottom-buttons button.active {
+    background: rgba(82, 109, 255, 0.4);
+    border: 1px solid rgba(82, 109, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(82, 109, 255, 0.2);
+}
+
+/* 按钮图标样式 */
+.bottom-buttons button i {
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+/* 移除可能存在的其他边框样式 */
+.learning-tabs::after,
+.learning-tabs::before {
+    display: none;
+    content: none;
+    border: none;
+}
